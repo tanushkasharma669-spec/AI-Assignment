@@ -11,7 +11,7 @@ This repository contains implementations for:
 
 # Turing Test Architecture
 
-The Turing Test is designed to evaluate whether a machine can exhibit intelligent behavior indistinguishable from a human.
+The Turing Test is designed to evaluate whether a machine can exhibit intelligent behaviour indistinguishable from a human.
 
 Architecture:
 
