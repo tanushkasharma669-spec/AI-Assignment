@@ -1,11 +1,11 @@
 # AI Assignment
 
 This repository contains implementations for:
-
-1. BFS and DFS search algorithms
-2. Missionaries and Cannibals problem
-3. Turing Test simulation
-4. CAPTCHA verification
+1. Simple Reflex Agent for AQI Monitoring
+2. BFS and DFS search algorithms
+3. Missionaries and Cannibals problem
+4. Turing Test simulation
+5. CAPTCHA verification
 
 ---
 
