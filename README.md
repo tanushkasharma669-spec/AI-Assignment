@@ -22,6 +22,24 @@ Steps:
 2. The AI program checks predefined responses.
 3. The system generates a reply.
 4. If the user cannot distinguish the machine from a human, the test is considered successful.
+5. ## Turing Test Architecture
+
+              +-------------------+
+Human Judge -->|   Interface Layer |<-- AI Agent
+               +-------------------+
+                        |
+                        v
+               +-------------------+
+               |  Conversation Log |
+               +-------------------+
+                        |
+                        v
+               +-------------------+
+               |  Evaluation Unit  |
+               +-------------------+
+
+Decision: If the judge cannot distinguish the AI from a human,
+The AI is considered to have passed the Turing Test.
 
 ---
 
@@ -39,4 +57,15 @@ Steps:
 3. System verifies the answer.
 4. If correct → Human verified.
 
+
+## CAPTCHA Architecture
+
+User ---> CAPTCHA Generator ---> Challenge Displayed
+             |
+             v
+      Verification Engine <--- User Response
+             |
+             v
+          Decision
+     (Human / Bot Detection)
 
