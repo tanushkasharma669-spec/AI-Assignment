@@ -26,28 +26,38 @@ Steps:
 ### Turing Test Architecture
 
 ```
-                 +----------------------+
-Human Judge ---->|    Interface Layer   |<---- AI Agent
-                 +----------------------+
-                            |
-                            v
-                 +----------------------+
-                 |   Conversation Log   |
-                 +----------------------+
-                            |
-                            v
-                 +----------------------+
-                 |    Evaluation Unit   |
-                 +----------------------+
+                 +-----------------------+
+                 |      Human Judge      |
+                 +-----------+-----------+
+                             |
+                             v
+                 +-----------------------+
+                 |    Interface Layer    |
+                 | (Chat / Text System)  |
+                 +-----------+-----------+
+                             |
+                             v
+                 +-----------------------+
+                 |     AI Processing     |
+                 |  (Response Generator) |
+                 +-----------+-----------+
+                             |
+                             v
+                 +-----------------------+
+                 |   Conversation Log    |
+                 | (Stores interactions) |
+                 +-----------+-----------+
+                             |
+                             v
+                 +-----------------------+
+                 |    Evaluation Unit    |
+                 | (Human vs Machine)    |
+                 +-----------------------+
 
-Decision: If the judge cannot distinguish the AI from a human,
+Decision:
+If the judge cannot reliably distinguish the AI from a human,
 The AI is considered to have passed the Turing Test.
 ```
-
-Decision: If the judge cannot distinguish the AI from a human,
-The AI is considered to have passed the Turing Test.
-
----
 
 # CAPTCHA Architecture
 
@@ -62,14 +72,34 @@ Steps:
 2. User enters the answer.
 3. System verifies the answer.
 4. If correct → Human verified.
-
-
-User ---> CAPTCHA Generator ---> Challenge Displayed
-             |
-             v
-      Verification Engine <--- User Response
-             |
-             v
-          Decision
-     (Human / Bot Detection)
-
+```
+                +----------------------+
+                |        User          |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |   CAPTCHA Generator  |
+                | (Math/Text/Image)    |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |  Challenge Display   |
+                | (Shown to the User)  |
+                +----------+-----------+
+                           |
+                 User enters response
+                           |
+                           v
+                +----------------------+
+                | Verification Engine  |
+                | (Checks correctness) |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |       Decision       |
+                | Human / Bot detected |
+                +----------------------+
+```
