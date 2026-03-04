@@ -23,7 +23,26 @@ Steps:
 3. The system generates a reply.
 4. If the user cannot distinguish the machine from a human, the test is considered successful.
 
-<img width="863" height="193" alt="image" src="https://github.com/user-attachments/assets/9835c417-691e-469a-a867-dcd8bba5dcd6" />
+### Turing Test Architecture
+
+```
+                 +----------------------+
+Human Judge ---->|    Interface Layer   |<---- AI Agent
+                 +----------------------+
+                            |
+                            v
+                 +----------------------+
+                 |   Conversation Log   |
+                 +----------------------+
+                            |
+                            v
+                 +----------------------+
+                 |    Evaluation Unit   |
+                 +----------------------+
+
+Decision: If the judge cannot distinguish the AI from a human,
+The AI is considered to have passed the Turing Test.
+```
 
 Decision: If the judge cannot distinguish the AI from a human,
 The AI is considered to have passed the Turing Test.
